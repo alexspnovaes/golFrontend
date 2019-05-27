@@ -1,0 +1,25 @@
+<div class="col-md-6">
+  <h2> User Details</h2>
+  <button class="btn btn-danger" (click)="addAirplane()"> Adicionar</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Código</th>
+      <th>Modelo</th>
+      <th>Quantidade Passageiros</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let airplane of airplanes.results">
+      <td class="hidden"></td>
+      <td>{{ airplane.codigoAviao }}</td>
+      <td>{{ airplane.modelo }}</td>
+      <td>{{ airplane.qtdPassageiros }}</td>
+      <td><button class="btn btn-danger" (click)="deleteAirplane(airplane)"> Delete</button>
+        <button class="btn btn-danger" (click)="editAirplane(airplane)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
